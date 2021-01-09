@@ -1,0 +1,11 @@
+{
+  "name": "Play my way",
+  "description": "Adjusting websites to my own accord.",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["activeTab"],
+  "manifest_version": 2
+}
