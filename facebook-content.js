@@ -11,7 +11,7 @@ function hideSponsored() {
 
 	if ($box.style.display !== 'none') {
 		$box.style.display = 'none';
-		console.log('Sponsored box mark as hidden.', $box);
+		console.log('Sponsored box marked as hidden.', $box);
 	}
 }
 
