@@ -1,19 +1,12 @@
 function hideRightRailBoxes() {
-	const $box = document.querySelector('[data-pagelet="RightRail"] > div:first-of-type');
+	const $boxes = document.querySelectorAll('[role=complementary] [aria-label=Reklamodawca]');
 
-	if (!$box) {
-		return;
-	}
-
-	const isSponsored = $box.textContent.includes('Sponsorowane');
-	const isProposed = $box.textContent.includes('Propozycje dla Ciebie');
-
-	if (isSponsored || isProposed) {
+	Array.from($boxes).forEach(($box) => {
 		if ($box.style.display !== 'none') {
 			$box.style.display = 'none';
-			console.log('Sponsored box marked as hidden.', $box);
+			console.log('Reklamodawca box marked as hidden.', $box.textContent);
 		}
-	}
+	});
 }
 
 setInterval(hideRightRailBoxes, 1e4);
